@@ -56,7 +56,7 @@ public class Feedback extends AppCompatActivity {
 
                         }
                     });
-                    myRef.child(user_mail +"_id:"+ (maxid + 1)).setValue(tv.getText().toString());
+                    myRef.child("Id : "+ (maxid + 1)).setValue(user_mail + "--- "+tv.getText().toString());
                 }
             }
         });

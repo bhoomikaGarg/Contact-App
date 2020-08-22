@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@color/colorgreyLight"
-        android:padding="20dp"
+        android:padding="10dp"
         android:textAlignment="center"
         android:text="PHONEBOOK"
         android:textColor="@color/colorPrimaryDark"

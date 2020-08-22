@@ -111,6 +111,7 @@ public class Update_contact extends AppCompatActivity {
       int rows= userDbHelper.updateinformation(searched_name,NAME,MOBILE,MAIL,sqLiteDatabase);
       if(rows==1) {
           Toast.makeText(getApplicationContext(), rows + " CONTACT UPDATED ", Toast.LENGTH_LONG).show();
+          display.setVisibility(View.GONE);
       }
        else {
            display.setVisibility(View.VISIBLE);

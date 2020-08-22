@@ -40,11 +40,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:padding="20dp"
+        android:padding="10dp"
         android:background="@color/colorgreyLight"
         android:fontFamily="@font/changa_one"
         android:text="SEARCH"
-        android:textSize="26dp"
+        android:textSize="25dp"
         android:layout_below="@+id/textView5" />
 
     <TextView
@@ -87,6 +87,6 @@
         android:background="@color/colorgreyLight"
         android:fontFamily="@font/changa_one"
         android:text="Delete this contact"
-        android:textSize="27sp"
+        android:textSize="22sp"
        android:layout_below="@+id/email" />
 </RelativeLayout>

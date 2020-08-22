@@ -73,6 +73,8 @@ public class View_activity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 if(list.contains(query)){
                     dataListAdapter.getFilter().filter(query);
+                    Toast.makeText(View_activity.this, "Contact exists",Toast.LENGTH_LONG).show();
+
                 }else{
                     Toast.makeText(View_activity.this, "No Match found",Toast.LENGTH_LONG).show();
                 }

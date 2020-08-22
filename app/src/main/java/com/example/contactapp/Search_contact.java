@@ -29,7 +29,7 @@ public class Search_contact extends AppCompatActivity {
         search_name=findViewById(R.id.search_name);
         mob=findViewById(R.id.mob);
         email=findViewById(R.id.email);
-
+        delete.setVisibility(View.GONE);
         mob.setVisibility(View.GONE);
         email.setVisibility(View.GONE);
         search.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,6 @@ public class Search_contact extends AppCompatActivity {
             }
 
         } );
-
     }
     public void searchfunction(View v){
         searched_name=search_name.getText().toString();
@@ -65,6 +64,9 @@ public class Search_contact extends AppCompatActivity {
 
                         mob.setText("MOBILE: " + mobile);
                         email.setText("EMAIL:" + mail);
+                        delete.setVisibility(View.VISIBLE);
+
+
                     }
                 } while (cursor.moveToNext());
             }
