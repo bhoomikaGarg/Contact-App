@@ -113,9 +113,9 @@ public class Update_contact extends AppCompatActivity {
           Toast.makeText(getApplicationContext(), rows + " CONTACT UPDATED ", Toast.LENGTH_LONG).show();
       }
        else {
-            display.setVisibility(View.VISIBLE);
+           display.setVisibility(View.VISIBLE);
           Toast.makeText(getApplicationContext(), rows + " CONTACTS UPDATED ", Toast.LENGTH_LONG).show();
-          display.setText("If more than 1 contact updated then you 've multiple contacts with same name");
+          display.setText("You have multiple contacts with same name.\n *Both updated*");
         }
     }
 }

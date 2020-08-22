@@ -1,10 +1,5 @@
 package com.example.contactapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
-
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,12 +7,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class View_activity extends AppCompatActivity {
     ListView listView;
@@ -27,12 +26,12 @@ public class View_activity extends AppCompatActivity {
     DataProvider dataProvider;
     DataListAdapter dataListAdapter;
     SearchView  searchView;
-
+    List<String> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_activity);
-
+        list=new ArrayList<>();
 
         listView=findViewById(R.id.listview);
         dataListAdapter=new DataListAdapter(getApplicationContext(),R.layout.row_layout);
@@ -51,7 +50,7 @@ public class View_activity extends AppCompatActivity {
                 email=cursor.getString(2);
                 dataProvider=new DataProvider(name,mobile,email);
                 dataListAdapter.add(dataProvider);
-
+                list.add(name);
                // Toast.makeText(getApplicationContext(),name+" "+mobile+" "+email,Toast.LENGTH_SHORT).show();
             }while(cursor.moveToNext());
 
@@ -72,13 +71,17 @@ public class View_activity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                searchView.clearFocus();
+                if(list.contains(query)){
+                    dataListAdapter.getFilter().filter(query);
+                }else{
+                    Toast.makeText(View_activity.this, "No Match found",Toast.LENGTH_LONG).show();
+                }
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                dataListAdapter.getFilter().filter(newText);
+                //dataListAdapter.getFilter().filter(newText);
                 return false;
             }
         });

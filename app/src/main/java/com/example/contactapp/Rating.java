@@ -1,5 +1,6 @@
 package com.example.contactapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,6 +9,12 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -20,7 +27,7 @@ public class Rating extends AppCompatActivity {
     Button submit;
     String rate;
     DataProvider dataProvider;
-
+    int max;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +60,25 @@ public class Rating extends AppCompatActivity {
         while (i.hasNext()) {
 
             String x = i.next();
-            Toast.makeText(getApplicationContext(), x+" stars have been sent as a feedback\n THANKYOU !", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), x+" stars have been sent as a feedback\n THANKS !", Toast.LENGTH_LONG).show();
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference();
+            myRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.exists()){
+                        max= (int) snapshot.getChildrenCount();
+                    }else{
 
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+            myRef.child(String.valueOf((max + 1))).setValue(x+" stars");
         }
     }
 }
