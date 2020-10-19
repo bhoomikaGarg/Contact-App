@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Add_activity">
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:background="@color/colorBlueMEdium"
+        android:background="@drawable/round_field"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/changa_one"
@@ -28,7 +30,8 @@
         android:id="@+id/label2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"        android:background="@color/colorBlueMEdium"
+        android:textSize="20dp"
+        android:background="@drawable/round_field"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/changa_one"
@@ -42,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:background="@color/colorBlueMEdium"
+        android:background="@drawable/round_field"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/changa_one"
@@ -83,7 +86,7 @@
         android:id="@+id/tv1"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:padding="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
@@ -101,11 +104,11 @@
         android:paddingRight="70dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/rounded_button"
         android:text="SAVE"
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
-        android:textSize="27sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:layout_below="@id/label3" />
 </RelativeLayout>

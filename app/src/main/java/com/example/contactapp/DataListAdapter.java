@@ -19,15 +19,16 @@ import java.util.List;
 
 public class DataListAdapter extends ArrayAdapter {
 
-    List list=new LinkedList();
+    List list=new ArrayList();
 
     public DataListAdapter(@NonNull Context context, int resource) {
         super(context, resource);
     }
-    public void add(Object object){
+       public void add(Object object){
         super.add(object);
         list.add(object);
     }
+
 
     @Override
     public int getCount() {
@@ -52,9 +53,7 @@ public class DataListAdapter extends ArrayAdapter {
         if(row==null){
             LayoutInflater layoutInflater= (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row=layoutInflater.inflate(R.layout.row_layout,parent,false);
-            //DOUBTTTTTT ABOVEEEEE: PARENT??? falsE??
 
-            //SET DATA? data provider
             layoutHandler=new LayoutHandler();
             layoutHandler.NAME= row.findViewById(R.id.user_name);
             layoutHandler.MOB= row.findViewById(R.id.user_mob);

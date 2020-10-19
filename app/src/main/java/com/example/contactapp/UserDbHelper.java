@@ -42,13 +42,14 @@ public class UserDbHelper extends SQLiteOpenHelper {
     }
 
     //for displaying data
-    public Cursor getinformation(SQLiteDatabase sqLiteDatabase){
+       public Cursor getinformation(SQLiteDatabase sqLiteDatabase){
         Cursor cursor;
         String display[]={UserContract.Info.USER_NAME,UserContract.Info.USER_MOB,UserContract.Info.USER_EMAIL};
         cursor=sqLiteDatabase.query(UserContract.Info.TABLE_NAME,display,null,null, null,
-                null,null);
+                null,UserContract.Info.USER_NAME);
         return cursor;
     }
+
 
     //for searching contact
     public Cursor searchinformation(String user_name,SQLiteDatabase sqLiteDatabase){

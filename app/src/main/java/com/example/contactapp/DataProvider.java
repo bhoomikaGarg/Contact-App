@@ -2,9 +2,9 @@ package com.example.contactapp;
 
 public class DataProvider {
 
-    private String name;
-    private String mobile;
-    private String email;
+    public String name;
+    public String mobile;
+    public String email;
 
 
     public DataProvider(String name, String mobile, String email) {
