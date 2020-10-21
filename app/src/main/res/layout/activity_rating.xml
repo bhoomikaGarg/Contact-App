@@ -10,12 +10,11 @@
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="69dp"
         android:layout_below="@+id/textView1"
-        android:background="@color/white"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="20dp"
+        android:background="@color/white" />
 
     <TextView
         android:id="@+id/textView1"
@@ -24,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:background="@color/colorBlueMEdium"
+        android:background="@drawable/round_field"
         android:padding="10dp"
         android:text="RATE ME:"
         android:textAllCaps="true"
@@ -37,9 +36,11 @@
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/border1"
         android:padding="10dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:text="5.0"
         android:layout_below="@+id/submit"
         android:textAlignment="center"
@@ -54,10 +55,10 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@color/colorgreyLight"
+        android:background="@drawable/rounded_button"
         android:text="Submit"
         android:layout_below="@+id/ratingBar"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="24dp"
          />
 </RelativeLayout>

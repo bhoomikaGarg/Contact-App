@@ -1,12 +1,15 @@
 package com.example.contactapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DataListAdapter extends ArrayAdapter {
-
+    Uri u;
     List list=new ArrayList();
 
     public DataListAdapter(@NonNull Context context, int resource) {
@@ -37,7 +40,7 @@ public class DataListAdapter extends ArrayAdapter {
 
     @Nullable
     @Override
-    public Object getItem(int position) {  //WHICH POSTION???
+    public Object getItem(int position) {
         return super.getItem(position);
     }
 
@@ -64,13 +67,28 @@ public class DataListAdapter extends ArrayAdapter {
 
         }
         else{
-            layoutHandler= (LayoutHandler)row.getTag(); ///WHY GET?
+            layoutHandler= (LayoutHandler)row.getTag();
         }
 
-        DataProvider dataProvider= (DataProvider)this.getItem(position);
+        final DataProvider dataProvider= (DataProvider)this.getItem(position);
 
         layoutHandler.NAME.setText(dataProvider.getName());
         layoutHandler.MOB.setText(dataProvider.getMobile());
+        layoutHandler.MOB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               u= Uri.parse("tel: "+dataProvider.getMobile());
+                Intent intent = new Intent(Intent.ACTION_DIAL,u);
+                try
+                {
+                    getContext().startActivity(intent);
+                }
+                catch ( SecurityException s)
+                {
+                    Toast.makeText(getContext(), "Can not copy to dialer", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         layoutHandler.EMAIL.setText(dataProvider.getEmail());
 
 

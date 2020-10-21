@@ -8,32 +8,38 @@
     tools:context=".Update_contact">
 
 
-
     <Button
         android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_marginLeft="10dp"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentEnd="true"
         android:background="@color/greyDark"
         android:fontFamily="@font/changa_one"
-        android:text="Search"
-        android:textSize="20sp"
+        android:text="@string/search"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/top" />
+        android:textSize="20sp" />
+
 
     <EditText
         android:id="@+id/search"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:padding="10dp"
-       android:layout_marginLeft="10dp"
-        android:background="#ECE4E4"
         android:layout_below="@+id/top"
-        android:layout_toRightOf="@+id/search_button"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/search_button"
+        android:background="#ECE4E4"
         android:inputType="textPersonName"
-        />
-
+        android:padding="10dp"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/new_mobile"
@@ -69,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@color/colorBlueMEdium"
+        android:background="@drawable/rounded_button"
         android:fontFamily="@font/changa_one"
         android:text="Update conatct"
         android:textSize="24dp"
@@ -132,11 +138,11 @@
         android:textAlignment="center"
         android:padding="5dp"
         android:textSize="20sp"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="19dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_button"
         android:fontFamily="@font/chela_one"
         android:text="ENTER NAME "
         android:textColor="#FFFFFF"
