@@ -48,7 +48,8 @@
         android:background="@color/colorgreyLight"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:padding="2dp"
         android:inputType="phone"
         android:layout_marginRight="10dp"
         android:textColor="@android:color/black"
@@ -63,9 +64,10 @@
         android:background="@color/colorgreyLight"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_marginRight="10dp"
+        android:padding="2dp"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/new_mobile"
         android:layout_toRightOf="@id/tv4" />
@@ -92,6 +94,7 @@
         android:textColor="@android:color/black"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:padding="2dp"
         android:textSize="20sp"
         android:text="PHONE NO:"
         android:layout_below="@+id/tv2" />
@@ -105,6 +108,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
+        android:padding="2dp"
         android:text="EMAIL : "
         android:layout_below="@+id/tv3" />
 
@@ -116,7 +120,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/chela_one"
         android:layout_centerHorizontal="true"
-        android:text="Enter information to be updated below"
+        android:text="Edit information to be updated"
         android:textSize="22sp"
         android:textColor="@color/colorPrimaryDark"
        android:layout_below="@+id/search_button"/>
@@ -127,6 +131,7 @@
         android:fontFamily="@font/balthazar"
         android:textColor="@android:color/black"
         android:layout_marginLeft="10dp"
+        android:padding="2dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:text="NAME :"
@@ -155,6 +160,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:padding="2dp"
         android:textSize="20sp"
         android:inputType="textPersonName"
         android:textColor="@android:color/black"

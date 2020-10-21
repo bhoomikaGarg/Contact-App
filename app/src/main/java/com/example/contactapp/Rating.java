@@ -42,7 +42,7 @@ public class Rating extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rate = String.valueOf(ratingBar.getRating());
-                displayrating.setText(rate);
+                displayrating.setText(rate+" STARS");
                 displayrating.setVisibility(View.VISIBLE);
 
                 ratingList();
@@ -60,7 +60,7 @@ public class Rating extends AppCompatActivity {
         while (i.hasNext()) {
 
             String x = i.next();
-            Toast.makeText(getApplicationContext(), x+" stars have been sent as a feedback\n THANKS !", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), " THANKS !"+x+" stars have been sent as a feedback", Toast.LENGTH_LONG).show();
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference();
             myRef.addValueEventListener(new ValueEventListener() {
