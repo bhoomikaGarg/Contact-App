@@ -90,7 +90,15 @@ public class DataListAdapter extends ArrayAdapter {
             }
         });
         layoutHandler.EMAIL.setText(dataProvider.getEmail());
+        layoutHandler.EMAIL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto",dataProvider.getEmail(), null));
+                getContext().startActivity(Intent.createChooser(intent, "Choose an Email client :"));
 
+            }
+        });
 
 
 
