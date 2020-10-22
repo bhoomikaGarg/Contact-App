@@ -14,6 +14,7 @@
         <activity android:name=".activity.Feedback"></activity>
         <activity android:name=".activity.Rating" />
         <activity android:name=".activity.Update_contact" />
+        <activity android:name=".activity.AppCreator" />
         <activity android:name=".activity.Search_contact" />
         <activity android:name=".activity.View_activity" />
         <activity android:name=".activity.Add_activity" />

@@ -79,8 +79,8 @@ public class Feedback extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.action_creator){
-           // Intent i=new Intent(Feedback.this,AppCreator.class);
-           // startActivity(i);
+            Intent i=new Intent(Feedback.this,AppCreator.class);
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
