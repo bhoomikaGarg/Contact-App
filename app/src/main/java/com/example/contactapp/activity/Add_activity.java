@@ -1,4 +1,4 @@
-package com.example.contactapp;
+package com.example.contactapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.contactapp.R;
+import com.example.contactapp.UserDbHelper;
 
 import static com.example.contactapp.CheckWhileAdding.checkMail;
 import static com.example.contactapp.CheckWhileAdding.checkPhone;

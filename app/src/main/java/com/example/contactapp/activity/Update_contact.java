@@ -1,4 +1,4 @@
-package com.example.contactapp;
+package com.example.contactapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.contactapp.R;
+import com.example.contactapp.UserDbHelper;
 
 public class Update_contact extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4,display;

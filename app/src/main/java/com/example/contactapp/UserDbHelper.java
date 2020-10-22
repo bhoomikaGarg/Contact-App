@@ -29,7 +29,6 @@ public class UserDbHelper extends SQLiteOpenHelper {
         Log.e("Database operation: "," Table created");
 
 
-
     }
     //for inserting data
     public void addinformation(String name, String mob,String email,SQLiteDatabase db){

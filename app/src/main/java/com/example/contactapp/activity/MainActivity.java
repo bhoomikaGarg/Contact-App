@@ -1,16 +1,13 @@
-package com.example.contactapp;
+package com.example.contactapp.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.SearchView;
+
+import com.example.contactapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Add_activity.class);
+                Intent i=new Intent(MainActivity.this, Add_activity.class);
                 startActivity(i);
             }
         });
@@ -34,21 +31,21 @@ public class MainActivity extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,View_activity.class);
+                Intent i=new Intent(MainActivity.this, View_activity.class);
                 startActivity(i);
             }
         });
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Search_contact.class);
+                Intent i=new Intent(MainActivity.this, Search_contact.class);
                 startActivity(i);
             }
         });
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,Update_contact.class);
+                Intent i=new Intent(MainActivity.this, Update_contact.class);
                 startActivity(i);
             }
         });
