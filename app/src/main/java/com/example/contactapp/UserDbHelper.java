@@ -76,7 +76,6 @@ public class UserDbHelper extends SQLiteOpenHelper {
 
         String selection=UserContract.Info.USER_NAME+" LIKE ?";
         String selection_args[]={user_name};
-
         sqLiteDatabase.delete(UserContract.Info.TABLE_NAME,selection,selection_args);
         Log.e("Database opertion: ","One row deleted...");
     }
