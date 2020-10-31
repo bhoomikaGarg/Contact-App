@@ -89,7 +89,6 @@ public class Search_contact extends AppCompatActivity {
                 if(searched_name.trim().equals(cursor.getString(0).trim()))
                 {
                     Toast.makeText(getApplicationContext(),"Contact deleted ",Toast.LENGTH_LONG).show();
-
                 }
 
             } while (cursor.moveToNext());
@@ -97,7 +96,5 @@ public class Search_contact extends AppCompatActivity {
         else{
             Toast.makeText(getApplicationContext(),"Contact does not exsist",Toast.LENGTH_LONG).show();
         }
-
-
-        }
+    }
 }

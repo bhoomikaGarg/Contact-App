@@ -1,10 +1,6 @@
 package com.example.contactapp;
-
 import java.util.regex.Pattern;
-
 public class CheckWhileAdding {
-
-
     public static boolean checkPhone(String phone){
         if(phone.length()==10){
             return true;}
@@ -12,8 +8,6 @@ public class CheckWhileAdding {
             return false;
         }
     }
-
-
     public static boolean empty(String name, String mob){
         if(name.equals("") || mob.equals(""))
         {  return false;
@@ -32,7 +26,4 @@ public class CheckWhileAdding {
             return false;
         return pat.matcher(email).matches();
     }
-
-
-
 }
